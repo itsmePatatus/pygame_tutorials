@@ -1,12 +1,9 @@
-# KidsCanCode - Game Development with Pygame video series
-# Jumpy! (a platform game) - Part 1
-# Video link: https://www.youtube.com/watch?v=uWvb3QzA48c
 # Project setup
 
 import pygame as pg
 import random
 from settings import *
-from sprites import *
+
 
 class Game:
     def __init__(self):
@@ -18,11 +15,11 @@ class Game:
         self.clock = pg.time.Clock()
         self.running = True
 
+
+
     def new(self):
         # start a new game
         self.all_sprites = pg.sprite.Group()
-        self.player = Player()
-        self.all_sprites.add(self.player)
         self.run()
 
     def run(self):
@@ -37,6 +34,8 @@ class Game:
     def update(self):
         # Game Loop - Update
         self.all_sprites.update()
+
+
 
     def events(self):
         # Game Loop - events
